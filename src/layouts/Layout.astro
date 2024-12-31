@@ -1,22 +1,47 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <!-- Character encoding and viewport settings for responsiveness -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Meta tags for SEO -->
+    <meta name="generator" content="Astro" />
+    <meta name="description" content="CodeCanarias is a leading software company providing innovative and custom software solutions in the Canary Islands. We specialize in web and mobile applications, development, and IT consultancy." />
+    <meta name="keywords" content="software company, Canary Islands, web development, mobile applications, IT consultancy, software solutions, CodeCanarias" />
+    <meta name="author" content="CodeCanarias" />
+
+    <!-- Open Graph tags for better social media sharing -->
+    <meta property="og:title" content="CodeCanarias - Software Solutions in the Canary Islands" />
+    <meta property="og:description" content="CodeCanarias is a leading software company providing innovative and custom software solutions in the Canary Islands." />
+    <meta property="og:image" content="/images/og-image.jpg" /> <!-- Example image for social sharing -->
+    <meta property="og:url" content="https://www.codecanarias.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card tags for better Twitter integration -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CodeCanarias - Software Solutions in the Canary Islands" />
+    <meta name="twitter:description" content="CodeCanarias is a leading software company providing innovative and custom software solutions in the Canary Islands." />
+    <meta name="twitter:image" content="/images/og-image.jpg" /> <!-- Same as Open Graph image -->
+
+    <!-- Dynamic page title -->
+    <title>{Astro.props.title || 'CodeCanarias - Software Solutions in the Canary Islands'}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+	height: 200vh;
+  }
+  
 </style>
