@@ -25,17 +25,19 @@ function Header() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 py-4 text-white flex justify-between items-center z-10">
+    <header className="fixed top-0 left-0 right-0 py-4 text-white flex justify-between items-center z-10 transition-all duration-200"
+      style={{
+        filter: contract ? 'backdrop-blur(15px)' : 'none',
+        backdropFilter: contract && window.innerWidth <= 768 ? 'blur(10px)' : 'none', // Adding the blur effect on mobile
+        backgroundColor: contract ? 'rgba(0,0,0,0.3)' : 'transparent',
+      }}
+    >
       <div
-        className={`container mx-auto flex justify-between items-center px-8 py-4 transition-all duration-200 rounded-[30px] ${
-          contract ? 'max-w-[1000px] bg-[#00000080]' : 'max-w-[1550px]'
-        }`}
-        style={{
-          backgroundColor: contract && window.innerWidth > 768 ? '#00000080' : 'transparent',
-        }}
+        className={`container mx-auto flex justify-between items-center px-8 py-4 transition-all duration-200 rounded-[30px] ${contract ? 'max-w-[1000px]' : 'max-w-[1550px]'}`}
+
       >
         <a className="text-3xl font-bold flex-[1] text-center md:text-start" href="/">
-          CodeCanarias.
+          CanaryCode
         </a>
 
         {/* Mobile Menu Toggle Button */}

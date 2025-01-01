@@ -9,13 +9,13 @@ export function Earth(props) {
 
   useFrame(() => {
     if (group.current) {
-      group.current.position.y = Math.sin(Date.now() / 1000) * 0.2 - 3;
+      group.current.position.y = Math.sin(Date.now() / 1000) * 0.2;
     }
   });
 
   useFrame(() => {
     if (group.current) {
-      group.current.rotation.y += 0.001;
+      group.current.rotation.y += 0.00025;
     }
   });
 
