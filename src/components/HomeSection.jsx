@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import { Earth } from '../../Scenes/Earth';
+import { Earth } from '../scenes/Earth';
 
 const HomeSection = () => {
     const [scale, setScale] = useState(30);
